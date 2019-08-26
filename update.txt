@@ -1,0 +1,20 @@
+@staticmethod
+    def divide(lst, day):
+        divided = []
+
+        for i in range(day):
+            if i != day-1:
+                this_day = []
+                last_id = 0
+                sum_time = 0
+
+                while len(lst) and sum_time + lst[0].day + adjacency[last_id][lst[0].id] <= 120:
+                    this_day.append(lst[0])
+                    sum_time = sum_time + lst[0].day + adjacency[last_id][lst[0].id]
+                    # print(sum_time)
+                    last_id = lst[0].id
+                    lst.pop(0)
+                divided.append(this_day)
+            else:
+                divided.append(lst)
+        return divided
