@@ -10,8 +10,6 @@ adjacency = [[5.5] * 40] * 40
 # from app.models import AttractionImage
 
 
-
-
 class Recommend:
     dimensions = [
         'drive', 'walking', 'nature', 'human', "hot_on_net",
